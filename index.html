@@ -2071,14 +2071,86 @@ p { max-width: 65ch; }
 
         /* Responsive tweaks */
         @media (max-width: 720px) {
+            /* Hero stays as-is per spec */
             .blog-post-hero.is-premium { padding: 110px 0 40px; }
-            .reason-heading { gap: 16px; }
+            .blog-post-hero.is-premium .blog-back {
+                padding: 10px 18px 10px 16px !important;
+                font-size: 0.72rem !important;
+                margin-bottom: 18px !important;
+            }
+
+            /* Section-content margins capped at 30px on mobile */
+            .blog-content.is-premium { padding: 30px 20px 50px !important; }
+            .blog-content.is-premium h2 {
+                margin: 30px 0 16px !important;
+                padding-top: 20px !important;
+                font-size: 1.5rem;
+            }
+            .blog-content.is-premium h3 { margin: 24px 0 12px !important; }
+            .blog-content.is-premium p { margin-bottom: 20px !important; }
+            .blog-content.is-premium ul,
+            .blog-content.is-premium ol { margin: 16px 0 20px 0 !important; }
+            .blog-content.is-premium blockquote {
+                font-size: 1.2rem;
+                padding: 30px 16px !important;
+                margin: 30px auto !important;
+            }
+            .section-divider { margin: 30px 0 !important; }
+
+            /* Reason heading — keep tight on mobile */
+            .reason-heading {
+                gap: 16px;
+                margin: 30px 0 16px !important;
+                padding-top: 20px !important;
+            }
             .reason-number { font-size: 2.4rem; min-width: 56px; }
             .reason-title { font-size: 1.4rem; padding-top: 4px; }
-            .stat-pull { padding: 24px 24px; flex-direction: column; gap: 8px; }
-            .blog-content.is-premium blockquote { font-size: 1.2rem; padding: 36px 16px; }
-            .cta-inline { padding: 32px 26px; }
-            .author-bio { flex-direction: column; text-align: center; }
+
+            /* All section/card paddings — top + bottom = 50px on mobile */
+            .stat-pull {
+                padding: 50px 24px !important;
+                margin: 30px 0 !important;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            .fix-callout {
+                padding: 50px 24px !important;
+                margin: 30px 0 !important;
+            }
+            .faq-card {
+                padding: 50px 24px !important;
+                margin-bottom: 16px !important;
+            }
+            .external-sources {
+                padding: 50px 24px !important;
+                margin: 30px 0 !important;
+            }
+            .author-bio {
+                padding: 50px 24px !important;
+                margin: 30px 0 0 !important;
+                flex-direction: column;
+                text-align: center;
+                gap: 18px;
+            }
+            .cta-inline {
+                padding: 50px 24px !important;
+                margin: 30px 0 !important;
+            }
+            .cta-inline h3 { font-size: 1.4rem !important; }
+            .reading-grid {
+                gap: 14px;
+                margin: 30px 0 !important;
+            }
+            .reading-grid a {
+                padding: 50px 50px 50px 22px !important;
+            }
+
+            /* Cover image breathing room */
+            .blog-cover.is-premium { padding: 30px 20px 0 !important; }
+
+            /* Bottom CTA section (template-level) — match 50px top/bottom on mobile */
+            .blog-bottom-cta { padding: 50px 20px !important; }
         }
     </style>
 
